@@ -17,7 +17,11 @@ export default {
 
   
 	///////////////////////////////////////////////////////////////////
-	// Listing
+    // Listing
+    getListings: function() {
+        console.log('hit browse api')
+        return axios.get("/browse/");
+      },
 	saveListing: function(listingData) {
 		console.log('hit listing api', listingData);
 		return axios.post('/listing/', listingData);

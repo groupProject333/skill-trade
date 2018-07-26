@@ -8,9 +8,11 @@ const passport = require('./passport');
 const app = express()
 const PORT = 8080
 // Route requires
-const user = require('./routes/api/users')
-const message = require("./routes/api/message")
-const listing = require('./routes/api/listing')
+//const user = require('./routes/api/users')
+//const message = require("./routes/api/message")
+//const listing = require('./routes/api/listing')
+const routes = require('./routes/');
+
 // const routes = ("./routes")
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -40,7 +42,7 @@ app.use(passport.session()) // calls the deserializeUser
 app.use('/user', user);
 app.use("/message", message);
 app.use('/listing', listing);
-// app.unsubsscribe(routes)
+//app.use(routes);
 // Starting Server 
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)

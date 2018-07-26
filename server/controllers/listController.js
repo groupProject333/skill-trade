@@ -2,7 +2,7 @@ const Listing = require('../database/models/Listing');
 
 module.exports = {
 	findAll: function(req, res) {
-		db.Listing
+		Listing
 			.find(req.query)
 			.sort({ date: -1 })
 			.then((dbModel) => res.json(dbModel))
