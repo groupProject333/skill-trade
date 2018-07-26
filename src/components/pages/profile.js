@@ -1,9 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, PropTypes } from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col } from 'reactstrap';
-import ProfileWidget from "../ProfileWidget";
-import ProfileForm from "../ProfileForm";
-import Wrapper from "../Wrapper";
 
 
 class Profile extends Component {
@@ -12,9 +8,7 @@ class Profile extends Component {
 
   render() {
     return (
-      <section>
-        <Wrapper>
-        <Container>
+      <div>
         <p>User Profile</p>
 
         <form action="/action_page.php">
@@ -28,11 +22,7 @@ class Profile extends Component {
         {/* {this.state.loggedIn && <Route path="/browse" component={Browse} />} */}
         {/* {console.log("/messaging/" + this.props.username)} */}
         <a> <Link to={`/messaging/${this.props.username}`}>Messaging</Link></a>
-        <Profile/>
-        <ProfileForm/>
-        </Container>
-        </Wrapper>
-      </section>
+      </div>
     );
   }
 }

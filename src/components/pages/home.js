@@ -1,23 +1,16 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from 'reactstrap';
-import PageSelect from "../PageSelect";
-import Wrapper from '../Wrapper'
+// import "../css/bootstrap.css";
 
 class Home extends Component {
   
 // if (loggedIn) {
   render() {
     return (
-      <section>
-        <Wrapper>
-          <Container>
-            <PageSelect/>
-              <h1>
-                HOME PAGE (not logged in)
-              </h1>
-          </Container>
-        </Wrapper>
-      </section>
+      <div className = "container text-center mx-auto my-3">
+        <h1>
+          HOME PAGE (not logged in)
+        </h1>
+      </div>
     );
   }
 // }
